@@ -1,0 +1,38 @@
+.Modal{
+    position: fixed;
+    left: calc(50% - 139px);
+    top: 30%;
+    z-index: 2;
+    padding: 10px 80px;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+    transition: all 0.3s linear;
+}
+
+.Dismiss-button{
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: none;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.Dismiss-button:hover {
+    cursor: pointer;
+    background-color: #ff8080;
+    color: white;
+}
+
+.closedModal {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.openModal {
+    opacity: 1;
+    transform: translateY(0);
+}
