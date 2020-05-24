@@ -1,9 +1,10 @@
-.Modal{
+.Modal {
     position: fixed;
-    left: calc(50% - 139px);
+    left: calc(50% - 125px);
     top: 30%;
     z-index: 2;
-    padding: 10px 80px;
+    padding: 10px 0px;
+    width: 250px;
     border: 1px solid black;
     border-radius: 4px;
     text-align: center;
@@ -12,7 +13,7 @@
     transition: all 0.3s linear;
 }
 
-.Dismiss-button{
+.Dismiss-button {
     background-color: #eee;
     padding: 10px 15px;
     border-radius: 8px;
@@ -28,11 +29,39 @@
 }
 
 .closedModal {
-    opacity: 0;
-    transform: translateY(-100%);
+    animation: closeModal 0.4s forwards;
 }
 
 .openModal {
-    opacity: 1;
-    transform: translateY(0);
+    animation: openModal 0.4s forwards;
+}
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(80%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(80%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
 }
