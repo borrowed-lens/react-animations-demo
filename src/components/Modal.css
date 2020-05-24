@@ -1,16 +1,15 @@
 .Modal {
+    width: 250px;
     position: fixed;
     left: calc(50% - 125px);
     top: 30%;
     z-index: 2;
     padding: 10px 0px;
-    width: 250px;
     border: 1px solid black;
     border-radius: 4px;
     text-align: center;
     font-size: 12px;
     background-color: white;
-    transition: all 0.3s linear;
 }
 
 .Dismiss-button {
@@ -24,16 +23,24 @@
 
 .Dismiss-button:hover {
     cursor: pointer;
-    background-color: #ff8080;
+    background-color: #dd4f4f;
     color: white;
 }
 
 .closedModal {
-    animation: closeModal 0.4s forwards;
+    animation: closeModal 1s forwards;
 }
 
 .openModal {
-    animation: openModal 0.4s forwards;
+    animation: openModal 0.5s forwards;
+}
+
+.slide-appear-enter-active {
+    animation: openModal 0.5s forwards;
+}
+
+.slide-appear-exit-active {
+    animation: closeModal 1s forwards;
 }
 
 @keyframes openModal {
@@ -42,7 +49,7 @@
         transform: translateY(-100%);
     }
     50% {
-        opacity: 1;
+        opacity: 0.7;
         transform: translateY(80%);
     }
     100% {
